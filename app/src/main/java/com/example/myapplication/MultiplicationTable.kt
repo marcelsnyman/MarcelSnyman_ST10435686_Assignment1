@@ -25,6 +25,23 @@ class MultiplicationTable : AppCompatActivity() {
             R.id.multiplicationTableTextView)
         multiplicationTable.text = "$tableNumber x table"
 
+// start with the heading and add two new lines
+
+        var tableDisplay = "$tableNumber x table\n\n"
+
+// loop 10 times and keep adding to the string
+
+// declare the control variable
+
+        var counter = 1
+        while (counter <= 10) {
+            val answer = tableNumber?.times(counter)
+            tableDisplay += "$tableNumber x $counter = ${answer}\n"
+            counter++
+        }
+// set the string onto the display
+        multiplicationTable.text = tableDisplay
+
 
     }
 }
